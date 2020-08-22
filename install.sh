@@ -321,25 +321,25 @@ wget -O premi.zip "https://raw.githubusercontent.com/janda09/openvpn/master/prem
 unzip premi.zip
 rm -f premi.zip
 
-# Set kill multin login
-
-wget -O janda "https://raw.githubusercontent.com/janda09/install/master/set_multilogin_autokill_lib"
-
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 chmod +x /usr/local/bin/*
-
-echo "* * * * * root /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 5; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 10; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 15; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 20; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 25; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 30; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 35; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 40; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 45; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 50; /usr/local/bin/janda 2" >> /etc/crontab
-echo "* * * * * root sleep 55; /usr/local/bin/janda 2" >> /etc/crontab
+cd
+#set auto kill multi login
+cd /usr/bin
+wget -O janda "https://raw.githubusercontent.com/janda09/install/master/set_multilogin_autokill_lib"
+chmod +x /usr/bin/*
+echo "* * * * * root /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 5; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 10; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 15; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 20; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 25; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 30; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 35; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 40; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 45; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 50; /usr/bin/janda 2" >> /etc/crontab
+echo "* * * * * root sleep 55; /usr/bin/janda 2" >> /etc/crontab
 
 # finishing
 cd
