@@ -327,7 +327,7 @@ cd
 #set auto kill multi login
 cd /usr/bin
 wget -O janda "https://raw.githubusercontent.com/janda09/install/master/set_multilogin_autokill_lib"
-chmod +x /usr/bin/*
+chmod +x janda
 echo "* * * * * root /usr/bin/janda 2" >> /etc/crontab
 echo "* * * * * root sleep 5; /usr/bin/janda 2" >> /etc/crontab
 echo "* * * * * root sleep 10; /usr/bin/janda 2" >> /etc/crontab
