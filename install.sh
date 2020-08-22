@@ -323,7 +323,7 @@ rm -f premi.zip
 
 # Set kill multin login
 
-wget -O janda https://raw.githubusercontent.com/janda09/install/master/set_multilogin_autokill_lib
+wget -O janda "https://raw.githubusercontent.com/janda09/install/master/set_multilogin_autokill_lib"
 
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 chmod +x /usr/local/bin/*
