@@ -367,7 +367,6 @@ squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
 nginxport="$(netstat -nlpt | grep -i nginx| grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 
 # install neofetch
-echo "deb http://dl.bintray.com/dawidd6/neofetch jessie main" | tee -a /etc/apt/sources.list
 curl "https://bintray.com/user/downloadSubjectPublicKey?username=bintray"| apt-key add -
 apt-get update
 apt-get install neofetch
