@@ -220,7 +220,7 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 110 -p 109 -p 456"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 80 -p 109 -p 443 -p 456"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -244,7 +244,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 444
 connect = 127.0.0.1:143
 
 [openvpn]
@@ -403,11 +403,11 @@ echo ""  | tee -a log-install.txt
 echo "Service"  | tee -a log-install.txt
 echo "-------"  | tee -a log-install.txt
 echo "OpenSSH  : 22"  | tee -a log-install.txt
-echo "Dropbear : 143, 109, 110, 456"  | tee -a log-install.txt
-echo "SSL      : 443"  | tee -a log-install.txt
+echo "Dropbear : 143, 80, 109, 443, 456"  | tee -a log-install.txt
+echo "SSL      : 444"  | tee -a log-install.txt
 echo "OpenVPNSSL : 442"  | tee -a log-install.txt
 echo "OpenVPN  : TCP 1194"  | tee -a log-install.txt
-echo "Squid3   : 80, 8080 (limit to IP SSH)"  | tee -a log-install.txt
+echo "Squid3   : 3128, 8080 (limit to IP SSH)"  | tee -a log-install.txt
 echo "Config VPN: http://$MYIP:81/janda.zip"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7500"  | tee -a log-install.txt
 echo "nginx    : 81"  | tee -a log-install.txt
